@@ -46,6 +46,7 @@ public class UserController {
 	public String updateEmail(@RequestParam int ID, @RequestParam String email) {
 		User u =US.getUser(ID);
 		u.setEmail(email);
+		US.addUser(u);
 		return "updated";
 	}
 	
